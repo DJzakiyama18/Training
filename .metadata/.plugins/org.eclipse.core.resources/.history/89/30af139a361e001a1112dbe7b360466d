@@ -1,0 +1,18 @@
+ class A1{
+	void hello() {
+		System.out.println("初めまして");
+	}
+}
+
+class A2 extends A1{
+	void hello() {
+		System.out.println("宜しくね");
+	}
+}
+
+public class Main {
+	public static void main(String args[]) {
+		A1	a = new A2();
+		a.hello();
+}
+}

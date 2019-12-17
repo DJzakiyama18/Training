@@ -1,0 +1,19 @@
+import java.awt.SystemTray;
+
+public class Main {
+
+	public static void main(String args[]) {
+//	int[] a = {1, 2, 3};
+//	int[] b = new int[3];
+//	b = a.clone();
+//	b[0] =5;
+//	System.out.println(a[0]);
+
+		int[] a = {1, 2, 3};
+		int[] b = new int[3];
+		System.arraycopy(a, 0, b, 0, a.length);
+		b[0] =5;
+		System.out.println(a[0]);
+
+}
+}
