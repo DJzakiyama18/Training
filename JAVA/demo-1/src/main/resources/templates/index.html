@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
@@ -7,11 +7,22 @@
 <body>
 <h1>NoDIパターン</h1>
 
-<form action = "output.html" th:action = "@{output}">
+<form method = "post" action = "output.html" th:action = "@{output}">
 <!-- 									何処に情報をを来るか指定 -->
-	<p>社員証を入力しください(3桁の半角数字)</p>
-	<input type ="text" name = "number">
+	<p>POST通信</p>
+
+<input type ="text" name = "number">
+
+<!-- 	<input type = "password" name = "password"> -->
 	<input type = "submit" value = "送信">
 </form>
+<!-- th タイムーリーフのタグ -->
+<!-- タイムリーフ　テンプレートエンジン　いまいちメリットがわからない -->
+<!-- <form method = "get" action = "output.html" th:action = "@{output}"> -->
+<!-- 	<p>GET通信</p> -->
+<!-- 	<input type = "text" name = "number"> -->
+<!-- 	<input type = "password" name = "password"> -->
+<!-- 	<input type = "submit" value = "送信"> -->
+<!-- </form> -->
 </body>
 </html>
