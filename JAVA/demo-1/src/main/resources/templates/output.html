@@ -7,10 +7,11 @@
 <body>
 <h1>NoDIパターン</h1>
 
-<p>社員No:<span th:text="${shainForm.number}">100</span></p>
-<p>社員名：<span th:text="${name}">ダミー太郎</span></p>
-<p>パスワード：<span th:text="${password}">パスワード</span></p>
-<a href ="index.html" th:href="@{input}">入力画面へ</a>
+<p>社員No:<span th:text="${number}">未入力</span></p>
+<p>社員名：<span th:text="${name}">未入力</span></p>
+<p>パスワード：<span th:text="${password}">未入力</span></p>
+<p>電話番号：<span th:text="${number1}">未入力</span></p>
+<a href ="index.html" th:href="@{/input}">入力画面へ</a>
 <!-- ${} EL式　 -->
 <!-- model.addAttributeで登録した文字列を表示する -->
 </body>

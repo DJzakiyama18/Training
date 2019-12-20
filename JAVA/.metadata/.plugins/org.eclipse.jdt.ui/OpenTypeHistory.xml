@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+    <typeInfo handle="=demo-1/src\/main\/java&lt;com.example.demo{ShainService.java[ShainService" modifiers="513" timestamp="1576847016000"/>
+    <typeInfo handle="=demo-1/src\/main\/java&lt;com.example.demo{ShainRepository.java[ShainRepository" modifiers="513" timestamp="1576847571000"/>
+    <typeInfo handle="=demo-2_DI/src\/main\/java&lt;com.example.demo{ShainService.java[ShainService" modifiers="513" timestamp="1576847016000"/>
+    <typeInfo handle="=demo-2_DI/src\/main\/java&lt;com.example.demo{ShainRepository.java[ShainRepository" modifiers="513" timestamp="1576847571000"/>
+</typeInfoHistroy>

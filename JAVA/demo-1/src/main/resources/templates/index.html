@@ -7,22 +7,26 @@
 <body>
 <h1>NoDIパターン</h1>
 
-<form method = "post" action = "output.html" th:action = "@{output}">
-<!-- 									何処に情報をを来るか指定 -->
+<form   method = "post" action = "output.html" th:action = "@{/output}" th:object="${shainForm}">
+<!-- th:action = "@{/output}"　URLの指定と処理のしてい	　th:object="${shainForm}"何処に情報をを送るか指定 -->
 	<p>POST通信</p>
-
-<input type ="text" name = "number">
-
-<!-- 	<input type = "password" name = "password"> -->
+	ナンバー<input type ="text" th:field="${shainForm.number}">
+	<p style = "color:red;" th:errors="${shainForm.number}" class="error"></p>
+	名前<input type ="text" th:field="${shainForm.name}">
+	<p style = "color:red;" th:errors="${shainForm.name}" class="error"></p>
+	パスワード<input type = "password" th:field="${shainForm.password}">
+	<p style = "color:red;" th:errors="${shainForm.password}" class="error"></p>
+<!-- 	値を送る時は＊{} 全ての値？	${}細かくしていする時はこっち-->
 	<input type = "submit" value = "送信">
 </form>
 <!-- th タイムーリーフのタグ -->
 <!-- タイムリーフ　テンプレートエンジン　いまいちメリットがわからない -->
-<!-- <form method = "get" action = "output.html" th:action = "@{output}"> -->
-<!-- 	<p>GET通信</p> -->
-<!-- 	<input type = "text" name = "number"> -->
-<!-- 	<input type = "password" name = "password"> -->
-<!-- 	<input type = "submit" value = "送信"> -->
-<!-- </form> -->
+<form method = "get" action = "output.html" th:action = "@{/output}" th:object = "${shainForm}">
+	<p>GET通信</p>
+	ナンバー<input type = "text" th:field = "*{number}">
+	名前<input type ="text" th:field="*{name}">
+	パスワード<input type = "password" th:field = "*{password}">
+	<input type = "submit" value = "送信">
+</form>
 </body>
 </html>
