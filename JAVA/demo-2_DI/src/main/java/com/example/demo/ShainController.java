@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -10,14 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ShainController {
 
-	private final ShainService shainService;
-
-	//shainServiceのDI
-	//DI化することによりまだ実装されてないクラスを使用しようちしてもエラーが出ない
-	public ShainController(ShainService shainService) {
-		this.shainService = shainService;
-	}
-
+//	private final ShainService shainService;
+//	//shainServiceのDI　コンストラクタインジェクション
+//	//DI化することによりまだ実装されてないクラスを使用しようちしてもエラーが出ない
+//	public ShainController(ShainService shainService) {
+//		this.shainService = shainService;
+//	}
+//	private  ShainService shainService;
+//	@Autowired
+//	//セッターインジェクション
+//    public void setUserRepository(ShainService shainService) {
+//        this.shainService = shainService;
+//    }
+	@Autowired
+	//フィールドインジェクション
+    private ShainService shainService;
 
 @ModelAttribute	//@RequestMapping の処理が行われる前に実行される
 public ShainForm setUpForm() {

@@ -1,0 +1,24 @@
+<header>
+  <div class="header-logo">
+    <a href="/">TweetApp</a>
+  </div>
+  <ul class="header-menus">
+    <li>
+      <a href="/posts/index">postsindex</a>
+    </li>
+    <li>
+        <a href = "/posts/index2">postsindex2</a>
+    </li>
+  </ul>
+</header>
+<div class="main posts-index">
+  <div class="container">
+    <div class="posts-index-item">
+      <%= @post1%>
+      <%# %=%は中身が表示されるので出力したい変数などをいれる %>
+    </div>
+    <div class="posts-index-item">
+    <%= @post2%>
+    </div>
+  </div>
+</div>

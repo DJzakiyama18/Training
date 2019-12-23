@@ -20,12 +20,12 @@ public String index(){//このURLに飛んだ時に行われる処理
 	return "index.html";
 }
 
-@RequestMapping(value = "/input")
+@RequestMapping("/input")
 public String index1() {
 	return "index.html";
 }
 
-@RequestMapping(value = "/output")
+@RequestMapping("/output")
 public String result(@Validated ShainForm shainForm, BindingResult bindingResult, Model model) {
 	if(bindingResult.hasErrors()) {
 		return "index.html";
