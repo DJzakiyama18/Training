@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'posts/index'
   get "posts/index2" => "posts#index2"
   get "posts/index3" => "posts#index3"
+  get "posts/index4" => "posts#index4"
 
   
   get "/" =>"home#top"

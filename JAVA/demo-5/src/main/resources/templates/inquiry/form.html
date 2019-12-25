@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 th:text="${complete}"></h2>
+<form  th:action="@{/inquiry/confirm}" th:object="${inquiryForm}">
+	名前<input type="text"  name = "name" th:value="*{name}">
+	<p style = "color:red;" th:errors="*{name}" class="error"></p><br>
+	パスワード<input type="text" name = "email" th:value="*{email}">
+	<p style = "color:red;" th:errors="*{email}" class="error"></p><br>
+	コメント<textarea name = "content"  th:field ="*{content}" ></textarea>
+	<p style = "color:red;" th:errors="*{content}" class="error"></p><br>
+	<input type = "submit" value = "送信">
+</form>
+</body>
+</html>

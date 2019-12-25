@@ -16,7 +16,7 @@
 	<p style = "color:red;" th:errors="${shainForm.name}" class="error"></p>
 	パスワード<input type = "password" th:field="${shainForm.password}">
 	<p style = "color:red;" th:errors="${shainForm.password}" class="error"></p>
-<!-- 	値を送る時は＊{} 全ての値？	${}細かくしていする時はこっち-->
+<!-- 	オブジェクトの値を習得時は＊{} ？	　　それ以外${}-->
 	<input type = "submit" value = "送信">
 </form>
 <!-- th タイムーリーフのタグ -->
