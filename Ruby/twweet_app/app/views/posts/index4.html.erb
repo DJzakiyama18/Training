@@ -1,26 +1,11 @@
-<header>
-  <div class="header-logo">
-    <a href="/">TweetApp</a>
-  </div>
-  <ul class="header-menus">
-    <li>
-      <a href="/posts/index">postsindex</a>
-    </li>
-    <li>
-        <a href = "/posts/index2">postsindex2</a>
-    </li>
-     <li>
-        <a href = "/posts/index3">postsindex3</a>
-    </li>
-  </ul>
-</header>
+
 <div class="main posts-index">
   <div class="container">
   <%
     @posts.each do |post|
   %>
     <div class="posts-index-item">
-    <%=post.content%>
+    <%= link_to(post.content,"/posts/#{post.id}")%>
       <%# %=%は中身が表示されるので出力したい変数などをいれる %>
     </div>
     <%end%>

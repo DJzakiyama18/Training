@@ -10,7 +10,33 @@
   </head>
 
   <body>
-  
+  <header>
+  <div class="header-logo">
+    <a href = "/">TweetApp</a>
+    <%= link_to("TweetAppとは","/")%>
+    <%# link_to("出力したい文字","URL") %>
+  </div>
+  <ul class="header-menus">
+    <li>
+      <a href = "/about">TweetAppとは</a>
+    </li>
+    <li>
+      <%= link_to("投稿一覧","/posts/index")%>
+    </li>
+    <li>
+        <%= link_to("postsindex2","/posts/index2")%>
+    </li>
+     <li>  
+         <%= link_to("postsindex3","/posts/index3")%>
+    </li>
+    <li>
+         <%= link_to("postsindex4","/posts/index4")%>
+    </li>
+    <li>
+          <%= link_to("新規投稿","/posts/new")%>
+    </li>
+  </ul>
+</header>
     <%= yield %>
   </body>
 </html>

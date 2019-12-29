@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/mypage" th:action="@{/mypage}" th:object="${loginForm}">
+	<input type ="text" th:field="*{user_name}"><br>
+	<input type ="text" th:field="*{password}"><br>
+	<input type="submit" value="ログイン">
+</form>
+<p th:text="${message}"></p>
+	<table>
+		<tr>
+			<th>コメント</th>
+		</tr>
+		<tr th:each = "list : ${contentList}">
+			<td th:text="${list.message}"></td>
+		</tr>
+	</table>
+</body>
+</html>

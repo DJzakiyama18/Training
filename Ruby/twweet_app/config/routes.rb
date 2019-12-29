@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  get 'posts/index'
+  get 'posts/index'#ルーティングは上から順に実行されていく
   get "posts/index2" => "posts#index2"
   get "posts/index3" => "posts#index3"
   get "posts/index4" => "posts#index4"
+  get "posts/new"    => "posts#new"
+  get "posts/:id"    => "posts#show" #:id = postsテーブルのidを参照
+  post "posts/create" => "posts#create" # データベースと接続する時は　post を使う
+  get "posts/:id/edit" => "posts#edit"
+ post "posts/:id/update" => "posts#update"
+ post "posts/:id/destroy" => "posts#destroy"
 
   
   get "/" =>"home#top"
