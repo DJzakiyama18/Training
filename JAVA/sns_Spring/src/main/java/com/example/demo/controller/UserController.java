@@ -39,7 +39,8 @@ public class UserController {
 
 
 @RequestMapping("/create")
-public String create(@ModelAttribute UserForm userForm, Model Model) {
+public String create(@ModelAttribute UserForm userForm, Model model) {
+	model.addAttribute("user_id", loginsession.getId());
 return "user/create";
 }
 @RequestMapping("/complate")

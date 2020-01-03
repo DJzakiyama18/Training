@@ -4,8 +4,6 @@ display: inline-block;
 padding: 0 115px;
 }
 
-
-
 .container {
   width: 1170px;
   padding: 0 15px;
@@ -34,8 +32,12 @@ padding: 0 115px;
 }
 
 .signin {
+	font-size:20px;
   margin-top:30px;
-  background-color: #239b76;
+  width:200px;
+	height:100px;
+  background-color:#33CCFF;
+  color: white;
 }
 
 
