@@ -22,7 +22,7 @@ public class UserServiceImpl {
 	}
 
 	public UserEntity save(UserEntity userEntity) {
-		return userRepojitory.save(userEntity);
+		return userRepojitory.save(userEntity) ;
 	}
 
 	public void delete(Integer userid) {

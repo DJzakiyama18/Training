@@ -14,9 +14,13 @@ values(
 
 
 
-insert into content(user_id ,message,created_at)
-values(1,"test","2019-12-24 00:00:00");
-insert into content(user_id ,message,created_at)
-values(2,"test","2019-12-24 00:00:00");
-insert into content(user_id ,message,created_at)
-values(3,"test","2019-12-24 00:00:00");
+insert into content(user_name ,message,created_at)
+values("test","初めまして","2019-12-24 00:00:00");
+insert into content(user_name ,message,created_at)
+values("test","あいうえお","2019-12-24 00:00:00");
+insert into content(user_name ,message,created_at)
+values("test","かきくけこ","2019-12-24 00:00:00");
+insert into content(user_name ,message,created_at)
+values("root","宜しくね","2019-12-24 00:00:00");
+insert into content(user_name ,message,created_at)
+values("user","お願いします","2019-12-24 00:00:00");

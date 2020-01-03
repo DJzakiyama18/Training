@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
-import java.time.LocalDate;
+
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,8 +13,8 @@ public class UserEntity {
 private int user_id;
 private String password;
 private String user_name;
-private LocalDate created_at;
-private LocalDate updated_at;
+private LocalDateTime created_at;
+private LocalDateTime updated_at;
 public int getUser_id() {
 	return user_id;
 }
@@ -32,16 +33,16 @@ public String getUser_name() {
 public void setUser_name(String user_name) {
 	this.user_name = user_name;
 }
-public LocalDate getCreated_at() {
+public LocalDateTime getCreated_at() {
 	return created_at;
 }
-public void setCreated_at(LocalDate created_at) {
+public void setCreated_at(LocalDateTime created_at) {
 	this.created_at = created_at;
 }
-public LocalDate getUpdated_at() {
+public LocalDateTime getUpdated_at() {
 	return updated_at;
 }
-public void setUpdated_at(LocalDate updated_at) {
+public void setUpdated_at(LocalDateTime updated_at) {
 	this.updated_at = updated_at;
 }
 

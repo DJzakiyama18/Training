@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:replace = "~{block/header::headerA}"></div>
+<h1>Create</h1>
+<form th:action="@{/content/complate/{user_id}(user_id = ${user_id})}" th:object="${contentForm}">
+<textarea name = "message"></textarea>
+<div th:if = "${#fields.hasErrors('message')}" th:errors="*{message}"></div>
+<input  type = "submit"  value = "送信">
+</form>
+</body>
+</html>

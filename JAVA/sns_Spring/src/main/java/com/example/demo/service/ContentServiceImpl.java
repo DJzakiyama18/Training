@@ -12,6 +12,7 @@ import com.example.demo.repojitory.ContentRepojitory;
 public class ContentServiceImpl {
 
 	public final ContentRepojitory contentRepojitory;
+
 	@Autowired
 
 	public ContentServiceImpl(ContentRepojitory contentRepojitory) {
@@ -26,12 +27,12 @@ public class ContentServiceImpl {
 		return contentRepojitory.save(contentEntity);
 	}
 
-	public void delet(Integer user_id) {
-		contentRepojitory.deleteById(user_id);
+	public void delet(Integer date_id) {
+		contentRepojitory.deleteById(date_id);
 	}
 
-	public ContentEntity find_by(Integer user_id) {
-		return contentRepojitory.getOne(user_id);
+	public ContentEntity find_by(Integer date_id) {
+		return contentRepojitory.getOne(date_id);
 	}
 
 }

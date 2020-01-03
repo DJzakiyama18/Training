@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:replace = "~{block/header::headerA}"></div>
+<p ><span th:text="${user_name}"></span><a type = "buton" th:href = "@{/user/update_name}">ユーザ名変更</a></p>
+<p ><span th:text="${password}"></span><a   type = "buton" th:href = "@{/user/update_password}">パスワード変更</a></p>
+<table>
+	<tr>
+		<th>コメント</th>
+	</tr>
+	<tr th:each = "list :${userContentList}">
+		<td th:text= "${list.message}"></td>
+		<td><a type ="buton" th:href = "@{/content/update/{/date_id}(date_id=${list.date_id})}">編集</a>
+				<a type = "buton" th:href = "@{/content/delete/{/date_id}(date_id=${list.date_id})}">削除</a>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

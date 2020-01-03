@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:replace = "~{block/header::headerA}"></div>
+<h2>現在のユーザー名</h2>
+<h1 th:text = "${user_name}"></h1>
+<form th:action="@{/user/complate_name/}" th:object="${userNameForm}">
+	<p><label for="user_name">名前</label>
+	<input type = "text" name = "user_name"  id="user_name"></p>
+	<div th:if="${#fields.hasErrors('user_name')}" th:errors="*{user_name}"></div>
+	<input type ="submit" value = "送信">
+	</form>
+	<p th:if="${message} != null"  th:text = "${message}"></p>
+
+</body>
+</html>
