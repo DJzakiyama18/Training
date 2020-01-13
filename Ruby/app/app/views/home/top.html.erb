@@ -1,0 +1,13 @@
+<h1>Home#top</h1>
+
+<%=form_tag("/posts/insert")do%>
+<input type = "text" name = "content">
+<input type = "submit" vale="送信">
+<%end%>
+<%@posts.each do |post| %>
+  <%= post.content%>
+<% end %>
+<%if flash[:notice]%>
+    <%= flash[:notice]%>
+<%end%>
+<p>Find me in app/views/home/top.html.erb</p>

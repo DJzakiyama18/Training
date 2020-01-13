@@ -49,6 +49,15 @@ public class ContentController {
 		if(result.hasErrors()) {
 			return "content/create";
 		}
+		if(user_id == 1){
+			UserEntity userEntity = userServiceImpl.find_by(user_id);
+		ContentEntity contentEntity = new ContentEntity();
+		contentEntity.setUser_name(userEntity.getUser_name());
+		contentEntity.setMessage(contentForm.getMessage());
+		contentEntity.setCreated_at(LocalDateTime.now());
+		contentServiceImpl.save(contentEntity);
+		return "redirect:/";
+		}
 		UserEntity userEntity = userServiceImpl.find_by(user_id);
 		ContentEntity contentEntity = new ContentEntity();
 		contentEntity.setUser_name(userEntity.getUser_name());

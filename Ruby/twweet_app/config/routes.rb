@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  post "user/:id/update" => "user#update"
+  get "user/:id/edit" => "user#edit"
+  post "user/create" => "user#create"
+  get 'user/index'
+  get "user/new" => "user#new"
+  get "user/:id" => "user#show"
+
   get 'posts/index'#ルーティングは上から順に実行されていく
   get "posts/index2" => "posts#index2"
   get "posts/index3" => "posts#index3"

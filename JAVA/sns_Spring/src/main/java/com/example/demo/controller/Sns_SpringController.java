@@ -41,6 +41,7 @@ public class Sns_SpringController {
 
 	@RequestMapping("/" )
 	public String home(@ModelAttribute LoginForm loginForm , BindingResult result,Model model) {
+		loginsession.setId(1);
 		userGet(model);
 		return "/index";
 	}
@@ -69,7 +70,7 @@ public class Sns_SpringController {
 
 	@RequestMapping("/logout")
 	public String logout( Model model ,RedirectAttributes redirect) {
-		loginsession.setId(0);
+		loginsession.setId(1);
 		loginsession.setUser_name(null);
 		loginsession.setPassword(null);
 		redirect.addFlashAttribute("message", "ログアウトしました");
@@ -80,7 +81,8 @@ public class Sns_SpringController {
 		model.addAttribute("user_id", loginsession.getId());
 		model.addAttribute("user_name", loginsession.getUser_name());
 		model.addAttribute("password",loginsession.getPassword());
-		List<ContentEntity> contentList = contentServiceImpl.findAll();
+//		List<ContentEntity> contentList = contentServiceImpl.findAll();
+		List<ContentEntity> contentList = contentRepojitory.userContentListOrder();
 		model.addAttribute("contentList", contentList);
 	}
 }

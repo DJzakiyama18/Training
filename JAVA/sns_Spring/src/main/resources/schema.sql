@@ -5,8 +5,8 @@ use sns_spring;
 
 create table user(
 user_id int not null auto_increment,
-password varchar(16) not null,
 user_name varchar(16) not null unique,
+password varchar(16) not null,
 created_at datetime not null,
 updated_at datetime ,
 primary key(user_id)
