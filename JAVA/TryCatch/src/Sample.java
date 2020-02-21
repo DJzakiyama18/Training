@@ -1,29 +1,30 @@
 public class Sample  {
-	String val = "a";
+	//String val = "a";
 	public static void main(String [] args)   {
 
-long l = 8;
-double d = l;
+//long l = 8;
+//double d = l;
+//
+//
+//System.out.println(d);
 
-
-System.out.println(d);
-
-//for(int i = 1; i<=100;i++){
-////	if( i % 3 == 0 && i % 5 == 0) {
-////		System.out.println("FizzBuzz");
-////		}
-////	else  if(i % 3 == 0) {
-////		System.out.println("Fizz");
-////	}
-////	else if(i % 5 == 0) {
-////		System.out.println("Buzz");
-////	}else {
-////		System.out.println(i);
-////	}
+for(int i = 1; i<=100;i++){
+	if( i % 3 == 0 && i % 5 == 0) {
+		System.out.println("FizzBuzz");
+		}
+	else  if(i % 3 == 0) {
+		System.out.println("Fizz");
+	}
+	else if(i % 5 == 0) {
+		System.out.println("Buzz");
+	}else {
+		System.out.println(i);
+	}
 //	System.out.println(i % 3 == 0 && i % 5 ==0?("FizzuBuzz"):(i % 3 == 0 )?("Fizz"):(i%5==0)?("Buzz"):i);
 //}
-}
-}
+	}
+	}
+	}
 //
 //			try {
 //            int i = 10 / 2; // 例外発生

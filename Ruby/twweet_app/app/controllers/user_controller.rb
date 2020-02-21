@@ -4,7 +4,7 @@ class UserController < ApplicationController
   end
 
   def show
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
   end
 
   def new
@@ -12,9 +12,13 @@ class UserController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], email: params[:email])
+    @user = User.new(
+      name: params[:name], 
+      email: params[:email],
+      image_name: "1.jpg"
+    )
     if @user.save
-      redirect_to("/user/#{user.id}")
+      redirect_to("/user/#{@user.id}")
     else
       render("user/new")
     end 
